@@ -13,5 +13,7 @@ console.log("utilisation de path.parse", path.parse(__filename));
 console.log("utilisation de path.parse().root", path.parse(__filename).root);
 console.log("utilisation de path.parse().ext", path.parse(__filename).ext);
 //Ce qui suit: bcp, bcp utilisé!!!
+//La version suivante empêche d'avoir à mettre les bons slash ou backslash:
 console.log("Construction d'un path:", path.join(__dirname, 'data', 'alain.json'));
+//La version suivante ne fonctionnerait pour Windows car on utlise des backslashs:
 console.log("Construction d'un path:", path.join(__dirname, 'data\\alain.json'));
